@@ -18,7 +18,6 @@ public interface DeptMapper {
     //方式 2：起别名
 //    @Select("SELECT id, name,create_time createTime,update_time updateTime FROM dept order by update_time desc")
     @Select("SELECT id, name,create_time ,update_time FROM dept order by update_time desc")
-
     List<Dept> findAll();
     @Delete("delete from dept where id = #{id}")
     void deleteById(int id);
